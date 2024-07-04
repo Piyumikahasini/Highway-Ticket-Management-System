@@ -1,1 +1,1 @@
-Highway-Ticket-Management-System
+Highway_Ticket_Management_System
