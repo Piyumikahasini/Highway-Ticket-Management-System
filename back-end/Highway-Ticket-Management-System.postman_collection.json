@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "4646b743-0fc6-4e42-89a0-0bb90be397ed",
+		"name": "Highway-Ticket-Management-System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31380173"
+	},
+	"item": [
+		{
+			"name": "User-Service",
+			"item": [
+				{
+					"name": "Save User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Hasini\",\r\n    \"email\": \"hasini@gmail.com\",\r\n    \"password\": \"1234\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Hasini\",\r\n    \"email\": \"hasini@gmail.com\",\r\n    \"password\": \"12345\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/delete?userName=Hasini",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "Hasini"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/getAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search By UserName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/searchByUserName?userName=Hasini",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"searchByUserName"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "Hasini"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle-Service",
+			"item": [
+				{
+					"name": "Save Vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"vehicleId\": \"V-0001\",\r\n\"userName\": \"Hasini\",\r\n\"type\": \"Car\",\r\n\"brand\": \"BMW\",\r\n\"engineCapacity\": \"2500\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicle/saveVehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"saveVehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vehicle",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"vehicleId\": \"V-0001\",\r\n\"userName\": \"Hasini\",\r\n\"type\": \"Car\",\r\n\"brand\": \"BMW\",\r\n\"engineCapacity\": \"3500\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicle/updateVehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"updateVehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicle/deleteVehicle?vehicleId=V-0001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"deleteVehicle"
+							],
+							"query": [
+								{
+									"key": "vehicleId",
+									"value": "V-0001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll Vehicle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicle/getAllVehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"getAllVehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search By VehicleID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicle/searchByVehicleId?vehicleId=V-0001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"searchByVehicleId"
+							],
+							"query": [
+								{
+									"key": "vehicleId",
+									"value": "V-0001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket-Service",
+			"item": [
+				{
+					"name": "Save Ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"ticketId\": \"T-0001\",\r\n\"user\": \"Hasini\",\r\n\"vehicle\": \"V-0001\",\r\n\"date\": \"2024-07-01\",\r\n\"time\": \"12:25\",\r\n\"amount\": \"1000.0\",\r\n\"entryPoint\": \"Galle\",\r\n\"exitPoint\": \"Matara\",\r\n\"status\": \"CREATED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ticket/saveTicket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ticket",
+								"saveTicket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"ticketId\": \"T-0001\",\r\n\"user\": \"Hasini\",\r\n\"vehicle\": \"V-0001\",\r\n\"date\": \"2024-07-01\",\r\n\"time\": \"12:25\",\r\n\"amount\": \"2000.0\",\r\n\"entryPoint\": \"Galle\",\r\n\"exitPoint\": \"Hambanthota\",\r\n\"status\": \"CREATED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ticket/updateTicket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ticket",
+								"updateTicket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll Ticket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ticket/getAllTickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ticket",
+								"getAllTickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search By TicketID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ticket/searchByTicketId?ticketId=T-0001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ticket",
+								"searchByTicketId"
+							],
+							"query": [
+								{
+									"key": "ticketId",
+									"value": "T-0001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment-Service",
+			"item": [
+				{
+					"name": "Place Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"paymentId\": \"P-0001\",\r\n\"ticket\": \"T-0001\",\r\n\"paymentMethod\": \"CARD\",\r\n\"paymentTime\": \"12:20\",\r\n\"amount\": \"2000.0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/payment/placePayment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"payment",
+								"placePayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll Payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/payment/getAllPayments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"payment",
+								"getAllPayments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
